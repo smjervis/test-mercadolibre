@@ -10,8 +10,8 @@ const ProductDetail = ({ productInfo }) => {
     <>
       <ProductBreadcrumbs productInfo={productInfo} />
       <div className='flex flex-col mt-8 mx-8'>
-        <div className='flex'>
-          <Image src={productInfo.picture} width={680} height={680} ></Image>
+        <div className='flex flex-col md:flex-row'>
+          <Image src={productInfo.picture} width={680} height={680} className="md:w-48" ></Image>
           <div className='flex-1 ml-4'>
             <p className='text-sm mb-3.5'>{productInfo.condition} - {productInfo.sold_quantity} vendidos</p>
             <h2 className='text-2xl font-bold'>{productInfo.title}</h2>
