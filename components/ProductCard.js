@@ -7,7 +7,7 @@ const ProductCard = ({ result }) => {
 
     const renderResults = (
         <Link href={`/items/${result.id}`} key={result.id} >
-            <a className="flex border-b">
+            <a className="flex border-b flex-col md:flex-row items-center">
                 <div>
                     <Image src={result.picture} width={180} height={180} className="rounded"></Image>
                 </div>
