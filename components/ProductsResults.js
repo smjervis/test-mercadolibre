@@ -4,7 +4,6 @@ import ResultBreadcrumbs from './ResultBreadcrumbs'
 import { useRouter } from "next/router"
 import fetchData from '../helpers/fetchData'
 import Spinner from "./Spinner"
-
 import NoResults from './NoResults'
 
 const ProductsResults = () => {
@@ -56,7 +55,6 @@ const ProductsResults = () => {
 
     const showNoResults = () => {
         if (noResults === 0) {
-            console.log("hola")
             return <NoResults />
         }
     }

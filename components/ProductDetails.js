@@ -8,7 +8,7 @@ const ProductDetail = ({ productInfo }) => {
 
   return (
     <>
-      <ProductBreadcrumbs productInfo={productInfo}/>
+      <ProductBreadcrumbs productInfo={productInfo} />
       <div className='flex flex-col mt-8 mx-8'>
         <div className='flex'>
           <Image src={productInfo.picture} width={680} height={680} ></Image>
