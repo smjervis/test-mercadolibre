@@ -12,12 +12,7 @@ const NavBar = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault()
-        try {
-            await fetchData(`/api/items?q=${searchTerm}`)
-            route.push(`/?items=${searchTerm}`)
-        } catch (error) {
-            console.log(error.message);
-        }
+        route.push(`/?items=${searchTerm}`)
     }
 
     return (

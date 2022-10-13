@@ -36,7 +36,7 @@ const ProductsResults = () => {
             }
             )()
         }
-    }, [searchTerm])
+    })
 
     const renderResults = () => {
         if (results && !isLoading) {
