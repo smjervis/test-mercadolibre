@@ -1,10 +1,9 @@
-import fetchData from "../../lib/fetchData";
+import fetchData from "../../helpers/fetchData";
 
 const handler = async (req, res) => {
     try {
         const id = req.query.q
-        const response = await fetchData(`https://api.mercadolibre.com/items/${id}`)
-        const descResponse = await fetchData(`https://api.mercadolibre.com/items/${id}/description`)
+        const [response, descResponse] = await Promise.all([fetchData(`https://api.mercadolibre.com/items/${id}`), fetchData(`https://api.mercadolibre.com/items/${id}/description`)])
         res.status(200).json({
             author: { name: "Santiago", lastname: "Mejia Jervis" },
             item: {

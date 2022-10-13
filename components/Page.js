@@ -9,8 +9,7 @@ const Page = ({ title, children }) => {
                 <title>{title} | Mercadolibre</title>
             </Head>
             <NavBar />
-            {/* <div className='w-3/4 m-auto'> */}
-            <div className='w-3/4 m-auto'>
+            <div className='w-3/4 m-auto bg-white mb-10 rounded'>
                 {children}
             </div>
         </>

@@ -1,4 +1,4 @@
-import fetchData from "../../lib/fetchData";
+import fetchData from "../../helpers/fetchData";
 
 const handler = async (req, res) => {
     try {

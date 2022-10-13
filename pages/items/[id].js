@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useRouter } from "next/router"
 import Page from "../../components/Page"
 import ProductDetails from "../../components/ProductDetails"
-import fetchData from '../../lib/fetchData'
+import fetchData from '../../helpers/fetchData'
 
 const ProductDetail = () => {
     const route = useRouter()

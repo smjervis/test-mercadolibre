@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
+import { useRouter } from "next/router"
 import Logo from "./Logo"
 import SearchButton from "./SearchButton"
-import fetchData from "../lib/fetchData"
-import { useRouter } from "next/router"
+import fetchData from "../helpers/fetchData"
+
 
 const NavBar = () => {
     const [searchTerm, setSearchTerm] = useState("")
@@ -20,14 +21,25 @@ const NavBar = () => {
     }
 
     return (
-        <nav className='bg-ml-yellow py-2 px-7 flex justify-center'>
-            <Logo />
-            <form className='flex w-3/4' onSubmit={onSubmit}>
-                <input type="text" className='py-1.5 px-4 w-full' placeholder='Nunca dejes de buscar' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
-                <SearchButton type="submit"></SearchButton>
-            </form>
-        </nav>
+        <>
+            <div className='bg-ml-yellow'>
+                <nav className='bg-ml-yellow py-2 flex justify-center w-3/4 mx-auto'>
+                    <Logo />
+                    <form className='flex w-full' onSubmit={onSubmit}>
+                        <input type="text" className='py-1.5 px-4 w-full' placeholder='Nunca dejes de buscar' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+                        <SearchButton type="submit"></SearchButton>
+                    </form>
+                </nav>
+            </div>
+
+        </>
     )
 }
 
 export default NavBar
+
+
+
+
+
+
